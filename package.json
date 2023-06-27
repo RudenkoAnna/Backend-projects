@@ -1,0 +1,11 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx rimraf dist/&& npx tsc"
+  },
+  "author": "",
+  "license": "ISC"
+}
