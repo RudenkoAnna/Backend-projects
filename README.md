@@ -1,47 +1,23 @@
-# Backend-projects
+Створіть http-сервер із CRUD для облікових записів та генерацією токенів у форматі “ім'я-токен”. При цьому, щоб тільки обліковий запис із правами “Адмін” міг видаляти записи (роль адміна, пароль та логін достатньо передати параметром запиту).
 
-Розв'яжіть завдання на дослідження та прогнозування з використанням setTimer, setInterval, setImmediate, process.nextTick: у дужках ( ) розставте порядок виконання коду.
+Ендпоінти:
 
-Додаткові вимоги:
+    одержати список облікових записів (запис);
 
-    Використовуйте матеріал із заняття – малюнок EventLoop. (
-      Promise.resolve().then(() => console.log('promise1 resolved'));
+    створити запис;
 
-Promise.resolve().then(() => console.log('promise2 resolved'));
-Promise.resolve().then(() => {
-console.log('promise3 resolved');
-process.nextTick(() => console.log('next tick inside promise resolve handler'));
-});
-Promise.resolve().then(() => console.log('promise4 resolved'));
-Promise.resolve().then(() => console.log('promise5 resolved'));
-setImmediate(() => console.log('set immediate1'));
-setImmediate(() => console.log('set immediate2'));
+    змінити запис;
 
-process.nextTick(() => console.log('next tick1'));
-process.nextTick(() => console.log('next tick2'));
-process.nextTick(() => console.log('next tick3'));
+    видалити запис;
 
-setTimeout(() => console.log('set timeout'), 0);
-setImmediate(() => console.log('set immediate3'));
-setImmediate(() => console.log('set immediate4'));
-)
+    одержати список токенів облікового запису;
 
-Задача:
+    одержати список всіх токенів;
 
-let interval = setInterval(() => { console.log('( )'); clearInterval(interval)});
+    створити токен;
 
-setImmediate(() => console.log('( )'));
+    змінити токен;
 
-setTimeout(() => console.log('( )'));
+    видалити токен.
 
-process.nextTick(() => console.log('( )'));
-
-console.log('( )');
-
-let myPromise = () => new Promise((resolve) => setTimeout(() => { console.log('( )'); resolve()}));
-
-let myPromise2 = () => new Promise((resolve) => { console.log('( )'); resolve()} );
-
-myPromise().then(console.log('( )'));
-
-myPromise2().then(console.log('( )'));
+В кінці задокументуйте АРІ.
